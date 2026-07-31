@@ -83,4 +83,4 @@ No marketplace fees in the data (assumption disclosed above); no seller identifi
 
 ## Reproduce
 
-The Power BI file points at my BigQuery project. To rebuild: create a BigQuery dataset, load `data/StockX-Data-Contest-2019.csv` with schema auto-detect, run the scripts in `sql/` in order (staging → dim → fact → validation), and repoint the .pbix connection — or just view the report screenshots in `images/`.
+The Power BI file points at my BigQuery project. To rebuild: create a BigQuery dataset, load `data/StockX-Data-Contest-2019-3.csv` with schema auto-detect, run the scripts in `sql/` in order (staging → dim → fact → validation), and repoint the .pbix connection `reports/stockx-resale-analytics.pbix` — or just view the report screenshots in `images/`.
