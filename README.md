@@ -2,7 +2,7 @@
 
 Analyzing **99,956 real StockX transactions** to answer three questions every reseller faces: **when to sell, which sizes to buy, and which shoes are risky bets.**
 
-![Demand Risk Map](images/04-stability-map.png)
+![Demand Risk Map](images/04-stability-map-banner.png)
 
 **Stack:** Google BigQuery (SQL) → Power BI (star schema, DAX) · Data: [StockX 2019 Data Contest](https://www.kaggle.com/datasets/hudsonstuck/stockx-data-contest)
 
@@ -39,7 +39,7 @@ I've resold sneakers on StockX and eBay for about six years (80+ SKUs), so this 
 
 **3. Scarcity lives at the tails of the size curve.** Core sizes 9–11 carry 66.8–79.5% median premiums on ~30K sales. Tail sizes 15–17 carry **206–288%** — a 3–4x multiple — on just 213 sales. The size curve is also brand-shaped: size 15 is **100% Off-White** (130 sales, zero Yeezys). Size 17's 287.7% rests on n=4, disclosed accordingly.
 
-![Size Curve](images/03-size-curve.png)
+![Size Curve](images/size-curve.png)
 
 **4. The market almost never loses.** Only **0.56%** of 99,956 sales closed below retail. Total retail value of $20.85M flipped for $44.64M — a $23.79M aggregate spread.
 
