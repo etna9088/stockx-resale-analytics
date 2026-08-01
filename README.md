@@ -84,3 +84,4 @@ No marketplace fees in the data (assumption disclosed above); no seller identifi
 ## Reproduce
 
 The Power BI file points at my BigQuery project. To rebuild: create a BigQuery dataset, load `data/StockX-Data-Contest-2019-3.csv` with schema auto-detect, run the scripts in `sql/` in order (staging → dim → fact → validation), and repoint the .pbix connection `reports/stockx-resale-analytics.pbix` — or just view the report screenshots in `images/`.
+This project runs on BigQuery's free sandbox tier with no billing account attached; live tables expire September 7, 2026 (confirmed via console). All SQL scripts in /sql fully rebuild the pipeline from the included CSV in minutes if the original tables have expired.
