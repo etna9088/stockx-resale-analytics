@@ -64,7 +64,7 @@ raw_sales (loaded table)
          └── fact_sales (99,956 rows: prices, spread, days-since-release + timing buckets)
 ```
 
-The staging view is the shock absorber: when the loaded schema turned out to differ from the plan (auto-typed dates and prices), only staging changed — both marts and everything downstream were untouched. Validation: five checks (row counts, dimension integrity, NULL audit, financial reconciliation, raw-defect evidence), with headline numbers verified through independent paths — Python profile vs SQL vs the Power BI model.
+The staging view is the shock absorber: when the loaded schema turned out to differ from the plan (auto-typed dates and prices), only staging changed — both marts and everything downstream were untouched. Validation: five checks (row counts, dimension integrity, NULL audit, financial reconciliation, raw-defect evidence), with headline numbers verified through independent paths — an independent profile of the raw CSV vs SQL vs the Power BI model.
 
 ## Star schema & DAX
 
