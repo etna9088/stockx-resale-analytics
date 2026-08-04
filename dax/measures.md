@@ -85,7 +85,7 @@ The SQL `release_window` carries numeric prefixes ("1. 0–30 days") as a sort c
 
 Measures verified against an independent profile of the raw CSV, on unfiltered and brand-filtered cards:
 
-| Measure / cut | Power BI | an independent profile of the raw CSV |
+| Measure / cut | Power BI | Independent reference |
 |---|---|---|
 | Sales Volume | 99,956 | 99,956 |
 | Total Spread $ | $23.79M | $23.79M |
