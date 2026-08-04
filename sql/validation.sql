@@ -1,5 +1,5 @@
 -- validation.sql — run after staging/dim/fact are built; all checks passed 2026-07-13
--- Reference numbers from independent Python (pandas) profile of the raw CSV.
+-- Reference numbers from independent an independent profile of the raw CSV.
 
 -- Check 1: row count survives the pipeline. Expect 99,956. PASSED
 SELECT COUNT(*) FROM `sneaker-resale-analytics.stockx_resale.fact_sales`;
@@ -18,7 +18,7 @@ SELECT COUNTIF(sale_price IS NULL) AS bad_prices,
        COUNTIF(days_since_release IS NULL) AS bad_release
 FROM `sneaker-resale-analytics.stockx_resale.fact_sales`;
 
--- Check 4: reconcile against the Python profile. Expect ~0.6% below retail,
+-- Check 4: reconcile against the an independent profile of the raw CSV. Expect ~0.6% below retail,
 -- ~$20.85M retail value, ~$44.64M resale value.
 -- PASSED: 0.56 / 20.85 / 44.64
 SELECT ROUND(100 * COUNTIF(gross_spread < 0) / COUNT(*), 2) AS pct_below_retail,
