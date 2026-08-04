@@ -83,9 +83,9 @@ The SQL `release_window` carries numeric prefixes ("1. 0–30 days") as a sort c
 
 ## Reconciliation record — 2026-07-13/14, all PASSED
 
-Measures verified against an independent Python (pandas) profile of the raw CSV, on unfiltered and brand-filtered cards:
+Measures verified against an independent profile of the raw CSV, on unfiltered and brand-filtered cards:
 
-| Measure / cut | Power BI | Python reference |
+| Measure / cut | Power BI | an independent profile of the raw CSV |
 |---|---|---|
 | Sales Volume | 99,956 | 99,956 |
 | Total Spread $ | $23.79M | $23.79M |
