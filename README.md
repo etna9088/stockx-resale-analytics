@@ -1,5 +1,7 @@
 # StockX Sneaker Resale Analytics
 
+*Footwear resale market analysis — 99,956 transactions: exit timing, size-curve scarcity, demand risk*
+
 Analyzing **99,956 real StockX transactions** to answer three questions every reseller faces: **when to sell, which sizes to buy, and which shoes are risky bets.**
 
 ![Demand Risk Map](images/04-stability-map-banner.png)
