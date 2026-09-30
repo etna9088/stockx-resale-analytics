@@ -2,7 +2,7 @@
 
 *Footwear resale market analysis — 99,956 transactions: exit timing, size-curve scarcity, demand risk*
 
-Analyzing **99,956 real StockX transactions** to answer three questions every reseller faces: **when to sell, which sizes to buy, and which shoes are risky bets.**
+Analyzing **public StockX resale transactions** to answer three questions every reseller faces: **when to sell, which sizes to buy, and which shoes are risky bets.**
 
 ![Demand Risk Map](images/04-stability-map-banner.png)
 
@@ -12,7 +12,7 @@ Analyzing **99,956 real StockX transactions** to answer three questions every re
 
 ## Why this project
 
-I've resold sneakers on StockX and eBay for about six years (80+ SKUs), so this dataset describes a market I operated in — every number here was sanity-checked against firsthand experience, including the fee assumptions. The data covers Sept 2017 – Feb 2019: two brands, 50 models, and two opposite playbooks. **Off-White ran a scarcity model** (27,794 sales at fat premiums); **Yeezy ran a volume model** (72,162 sales at thin ones, after adidas deliberately expanded supply in 2018). That contrast is the color language of every chart in the report.
+I've resold sneakers for about 6 years, including on StockX and eBay so this dataset describes a market I operated in — every number here was sanity-checked against firsthand experience. The data covers Sept 2017 – Feb 2019: two brands, 50 models, and two opposite playbooks. **Off-White ran a scarcity model** (27,794 sales at fat premiums); **Yeezy ran a volume model** (72,162 sales at thin ones, after adidas deliberately expanded supply in 2018). That contrast is the color language of every chart in the report.
 
 ## Business questions
 
@@ -75,7 +75,7 @@ The staging view is the shock absorber: when the loaded schema turned out to dif
 `dim_sneaker` (1) → (*) `fact_sales` ← (1) `Dim_Date` (DAX `CALENDAR()`, marked as date table). Silhouette parsing expands 2 brands into 11 product families. Measures (full formulas in [`dax/measures.md`](dax/measures.md)):
 
 - **Median Resale Premium %** — `MEDIANX` over per-transaction markup; median because prices are heavily right-skewed.
-- **Net Premium After Fees %** — the dataset has no fees, so seller economics are modeled with a disclosed **12.5%** fee assumption (9.5% transaction + 3% processing, the 2017–2019 schedule, known from my own payout records).
+- **Net Premium After Fees %** — the dataset has no fees, so seller economics are modeled with a disclosed assumption of about **12.5%** (9.5% transaction + 3% processing); actual StockX fees vary by seller level.
 - **Price Volatility (CV)** — stdev ÷ mean of sale price per model; dividing by the mean makes a $250 and a $1,500 shoe comparable, where raw stdev would just re-rank by price level.
 - Reference lines on the risk map are the **medians of the 50 model-level values** (240.79% / 0.142), so each axis splits the catalog in half.
 
