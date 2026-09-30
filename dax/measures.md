@@ -36,7 +36,7 @@ MEDIANX(
     DIVIDE(fact_sales[sale_price] * 0.875 - fact_sales[retail_price], fact_sales[retail_price])
 )
 ```
-Same as above with the seller keeping 87.5% of sale price — a disclosed assumption of ~12.5% StockX seller fees (9.5% transaction + 3% payment processing, 2017–2019 fee schedule, known from firsthand payout records). Format: percentage, 1 decimal.
+Same as above with the seller keeping 87.5% of sale price — a disclosed assumption of about 12.5% (9.5% transaction + 3% processing); actual StockX fees vary by seller level. Format: percentage, 1 decimal.
 
 ### Below Retail %
 ```dax
